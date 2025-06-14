@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - Cozy Corner Coffee Shop</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Cozy Corner</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/menu.html" class="active">Menu</a></li>
+        <li><a href="/invoice.html">Order Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-header">
+      <h1>Our Menu</h1>
+      <p>Discover our carefully crafted selection of beverages</p>
+    </section>
+
+    <section class="menu-grid" id="menuGrid">
+      <!-- Menu items will be inserted here dynamically -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Hours</h3>
+        <p>Monday - Friday: 7am - 8pm</p>
+        <p>Saturday - Sunday: 8am - 6pm</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>123 Coffee Street</p>
+        <p>Phone: (555) 123-4567</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <p>Facebook | Instagram | Twitter</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Cozy Corner Coffee Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuItems = [
+      {
+        ItemID: 1,
+        Name: "Espresso",
+        Description: "Strong black coffee",
+        Price: 2.50,
+        ImageURL: "espresso.png"
+      },
+      {
+        ItemID: 2,
+        Name: "Cappuccino",
+        Description: "Espresso with steamed milk",
+        Price: 3.50,
+        ImageURL: "Screenshot 2025-06-14 103438.png"
+      },
+      {
+        ItemID: 3,
+        Name: "Latte",
+        Description: "Espresso with more steamed milk",
+        Price: 4.00,
+        ImageURL: "latte.png"
+      }
+    ];
+
+    const menuGrid = document.getElementById('menuGrid');
+
+    menuItems.forEach(item => {
+      const itemDiv = document.createElement('div');
+      itemDiv.className = 'menu-item';
+      itemDiv.innerHTML = `
+        <img src="${item.ImageURL}" alt="${item.Name}" class="menu-img" />
+        <h2>${item.Name}</h2>
+        <p>${item.Description}</p>
+        <p class="price">$${item.Price.toFixed(2)}</p>
+      `;
+      menuGrid.appendChild(itemDiv);
+    });
+  </script>
+</body>
+</html>

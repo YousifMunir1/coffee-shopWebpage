@@ -1,0 +1,23 @@
+[
+    {
+        "ItemID": 1,
+        "Name": "Espresso",
+        "Description": "Strong black coffee",
+        "Price": 2.50,
+        "ImageURL": "espresso.png"
+    },
+    {
+        "ItemID": 2,
+        "Name": "Cappuccino",
+        "Description": "Espresso with steamed milk",
+        "Price": 3.50,
+        "ImageURL": "images/cappuccino.jpg"
+    },
+    {
+        "ItemID": 3,
+        "Name": "Latte",
+        "Description": "Espresso with more steamed milk",
+        "Price": 4.00,
+        "ImageURL": "images/latte.jpg"
+    }
+]
